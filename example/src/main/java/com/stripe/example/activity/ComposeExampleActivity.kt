@@ -95,13 +95,13 @@ class ComposeExampleActivity : AppCompatActivity() {
                     viewModel.inProgress.value = false
                 }
                 is PaymentResult.Failed -> {
-                    viewModel.status.value += "\n\nPaymentIntent confirmation failed with throwable ${it.throwable} \n\n"
+                    viewModel.status.value += "\n\nPaymentIntent confirmation failed with " +
+                        "throwable ${it.throwable} \n\n"
                     viewModel.inProgress.value = false
                 }
             }
         }
     }
-
 
     @Composable
     fun ConfirmButton(
@@ -139,7 +139,6 @@ class ComposeExampleActivity : AppCompatActivity() {
             }
         }
     }
-
 
     private companion object {
         /**
@@ -179,5 +178,4 @@ class ComposeExampleActivity : AppCompatActivity() {
             trackingNumber = "12345"
         )
     }
-
 }

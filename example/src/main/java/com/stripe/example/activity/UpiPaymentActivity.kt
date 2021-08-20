@@ -44,7 +44,7 @@ class UpiPaymentActivity : StripeIntentActivity() {
     }
 
     override fun onConfirmSuccess() {
-        //TODO(ccen) get the client secret
+        // TODO(ccen) get the client secret
         val clientSecret = "12345"
         startActivity(
             Intent(this@UpiPaymentActivity, UpiWaitingActivity::class.java)

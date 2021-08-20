@@ -173,7 +173,6 @@ abstract class StripeIntentActivity : AppCompatActivity() {
         viewModel.inProgress.value = false
     }
 
-
     protected open fun onConfirmError(failedResult: PaymentResult.Failed) {
         viewModel.status.value += "\n\nPaymentIntent confirmation failed with throwable " +
             "${failedResult.throwable} \n\n"
